@@ -1,0 +1,24 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build Project",
+      "type": "shell",
+      "command": "javac -d ./bin/ ./src/app/*.java",
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "Compile JAR Archive",
+      "type": "shell",
+      "command": "cd bin && jar -cvfm Launcher.jar manifest.txt app/HelloWorld.class",
+      "problemMatcher": [],
+      "group": "none"
+    }
+  ]
+}
